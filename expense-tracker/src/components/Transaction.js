@@ -5,10 +5,9 @@ export const Transaction = ({ transaction }) => {
   const sign = transaction.amount < 0 ? '-' : '+';
 
   return (
-    <li className="minus">
+    <li className={transaction.amount < 0 ? 'minus' : 'plus'}>
       {transaction.text}{' '}
       <span>
-        (// Use Math.abs() to avoid double negative signs by the amount)
         {sign}${Math.abs(transaction.amount)}
       </span>
       <button className="delete-btn">x</button>
