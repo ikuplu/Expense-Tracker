@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 
-const [text, setText] = useState('');
-const [amount, setAmount] = useState(0);
-
 export const AddTransaction = () => {
+  const [text, setText] = useState('');
+  const [amount, setAmount] = useState(0);
+
   return (
     <>
       <h3>Add new transaction</h3>
