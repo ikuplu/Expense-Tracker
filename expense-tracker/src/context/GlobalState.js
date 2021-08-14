@@ -25,6 +25,12 @@ export const GlobalProvider = ({ children }) => {
       payLoad: id,
     });
   }
+  function addTransaction(transaction) {
+    dispatch({
+      type: 'ADD_TRANSACTION',
+      payLoad: transaction,
+    });
+  }
 
   return (
     <GlobalContext.Provider
